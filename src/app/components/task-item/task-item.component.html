@@ -1,3 +1,4 @@
+<div [ngClass]="{reminder: task.reminder}" class="task">
 <div class="card">
     <header class="card-header">
       <p class="card-header-title">
@@ -5,7 +6,10 @@
       </p>
       <button class="card-header-icon" aria-label="more options">
         <span class="icon">
-            <button (click)="onDelete(task.id)"class="delete is-large" [ngStyle] = "{color: 'red'} "></button>
+          <fa-icon [icon]="icon" class="fa-2x" [style.color] = "iconColor"></fa-icon>
+        </span>
+        <span class="icon">
+            <button (click)="onDelete(task.id)" class="delete is-large" [ngStyle] = "{'background-color': 'red' }"></button>
         </span>
       </button>
     </header>
@@ -17,4 +21,5 @@
       </div>
     </div>
   </div>
-  <br>
+</div>
+<br>
