@@ -1,0 +1,20 @@
+<div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Task {{task.id}}
+      </p>
+      <button class="card-header-icon" aria-label="more options">
+        <span class="icon">
+            <button (click)="onDelete(task.id)"class="delete is-large" [ngStyle] = "{color: 'red'} "></button>
+        </span>
+      </button>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        <h4>{{task.text}}</h4>
+        <br>
+        <time datetime="2016-1-1">{{task.day}}</time>
+      </div>
+    </div>
+  </div>
+  <br>

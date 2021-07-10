@@ -1,6 +1,12 @@
 <header>
     <div class="box">
-    <h1>{{ title }}</h1>
-    <app-button></app-button>
+        <div class="columns">
+            <div class="column is-half is-offset-one-quarter">
+                <h1 class="title">{{ title }}</h1>
+            </div>
+            <div class="column">
+                <app-button text='Add a new Task' (btnClick)="addTaskBtnClick()"></app-button>
+            </div>
+        </div>
     </div>
 </header>
