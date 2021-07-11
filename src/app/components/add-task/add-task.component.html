@@ -1,0 +1,34 @@
+<form class="form" (ngSubmit)="onSubmit()">
+    <div class="box">
+        <div class="field">
+            <label class="label">Task</label>
+            <div class="control">
+                <input class="input" id="task" name="task" [(ngModel)]="text" type="text" placeholder="Add Task"
+                    [autocomplete]="false">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Day</label>
+            <div class="control">
+                <input class="input" id="day" name="day" [(ngModel)]="day" type="text" placeholder="Add Day & Time">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Tags</label>
+            <div class="control">
+                <input class="input" id="tags" name="tags" type="text" [(ngModel)]="tags"
+                    placeholder="Comma separated values Ex: important, critical etc">
+            </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <label class="label">REMINDER:</label>
+                <input type="checkbox" name="reminder" [(ngModel)]="reminder">
+                Yes
+            </div>
+        </div>
+        <div class="control">
+            <input type="submit" value="Save Task" class="button is-primary" />
+        </div>
+    </div>
+</form>

@@ -1,0 +1,15 @@
+.reminder {
+    border-left: 10px solid green;
+}
+
+.bell-red {
+    color: red;
+}
+
+.bell-green {
+    color: green;
+}
+
+.faicon:hover {
+    opacity: 0.5;
+}

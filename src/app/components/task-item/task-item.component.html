@@ -1,25 +1,25 @@
-<div [ngClass]="{reminder: task.reminder}" class="task">
-<div class="card">
-    <header class="card-header">
-      <p class="card-header-title">
-        Task {{task.id}}
-      </p>
-      <button class="card-header-icon" aria-label="more options">
-        <span class="icon">
-          <fa-icon [icon]="icon" class="fa-2x" [style.color] = "iconColor"></fa-icon>
-        </span>
-        <span class="icon">
-            <button (click)="onDelete(task.id)" class="delete is-large" [ngStyle] = "{'background-color': 'red' }"></button>
-        </span>
-      </button>
-    </header>
-    <div class="card-content">
-      <div class="content">
-        <h4>{{task.text}}</h4>
-        <br>
-        <time datetime="2016-1-1">{{task.day}}</time>
+<br>
+<div class="box" [ngClass]="{'reminder': task.reminder}">
+  <div class="card-content" [style.background-color]="'#FFFFCC'">
+      <div class="columns">
+        <div class="column is-four-fifths">
+          <h2><b>{{task.text}}</b></h2>
+        </div>
+        <div class="column">
+          <span class="icon">
+            <fa-icon [icon]="icon" class="faicon fa-2x bell-green" *ngIf="iconColor" (click)="toggleOnBellIconClick(task)"></fa-icon>
+            <fa-icon [icon]="icon" class="faicon fa-2x bell-red" *ngIf="!iconColor" (click)="toggleOnBellIconClick(task)"></fa-icon>
+          </span> 
+        </div>
+      <div class="column">
+          <span class="icon">
+            <fa-icon (click)="onDelete(task.id)" class="faicon fa-2x" [icon]="deleteIcon" [style.color]="'red'"></fa-icon>
+          </span>
       </div>
-    </div>
+      </div>
+      <time datetime="2016-1-1">{{task.day}}</time>
+      <ng-templete *ngFor="let tag of task.tags">
+        <span class="tag is-success" [style.margin]="'5px'">{{tag}}</span>
+      </ng-templete>
   </div>
 </div>
-<br>

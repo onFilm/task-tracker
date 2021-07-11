@@ -4,7 +4,11 @@
       "id": 1,
       "text": "Doctors appointment",
       "day": "May 5th at 2:30pm",
-      "reminder": true
+      "reminder": true,
+      "tags": [
+        "help-needed",
+        "good-first-issue"
+      ]
     },
     {
       "id": 2,
@@ -14,9 +18,20 @@
     },
     {
       "id": 3,
-      "text": "False appointement",
+      "text": "Doctors appointment",
       "day": "May 5th at 2:30pm",
-      "reminder": false
+      "reminder": false,
+      "tags": [
+        "urgent",
+        "bug"
+      ]
+    },
+    {
+      "text": "Health checkup",
+      "day": "Today",
+      "tags": "important",
+      "reminder": true,
+      "id": 4
     }
   ]
 }
