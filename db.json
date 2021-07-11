@@ -28,9 +28,11 @@
     },
     {
       "text": "Health checkup",
-      "day": "Today",
-      "tags": "important",
-      "reminder": true,
+      "day": "Monday",
+      "tags": [
+        "dental"
+      ],
+      "reminder": false,
       "id": 4
     }
   ]

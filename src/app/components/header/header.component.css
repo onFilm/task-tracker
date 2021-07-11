@@ -1,2 +1,6 @@
-
+.box {
+    width: 75%;
+    margin: 0% 12% 0% 12%;
+    border-bottom: 5px solid lawngreen;
+}
 

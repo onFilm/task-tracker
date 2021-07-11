@@ -13,3 +13,8 @@
 .faicon:hover {
     opacity: 0.5;
 }
+
+.box {
+    margin: 0% 25% 0% 25%;
+    width: 50%;
+}
