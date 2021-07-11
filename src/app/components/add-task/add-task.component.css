@@ -12,3 +12,11 @@
     width: 40%;
     float: right;
 }
+
+.notification {
+    display: table;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}

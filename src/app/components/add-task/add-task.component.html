@@ -1,4 +1,4 @@
-<form #addTaskForm = "ngForm" *ngIf="showAddTask" class="form" (ngSubmit)="onSubmit()">
+<form #addTaskForm = "ngForm" *ngIf="showAddTask" class="form" (ngSubmit)="onSubmit(addTaskForm)">
     <div class="box">
         <div class="field">
             <label class="label">Task</label>
@@ -32,6 +32,10 @@
         <div class="control">
             <input type="submit" value="Save Task" class="button is-primary" />
             <input type="button" value="Clear" class="button clear" (click) = "clearForm(addTaskForm)" />
+        </div>
+        <div *ngIf="displayNotification" class="notification is-success">
+            <icon class="delete" (click)="toggleNotificationOff()"></icon>
+            Task saved successfully!!!
         </div>
     </div>
 </form>

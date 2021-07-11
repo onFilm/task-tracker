@@ -16,6 +16,7 @@ export class AddTaskComponent implements OnInit {
   tags: any;
   reminder: boolean = false;
   showAddTask: boolean = false;
+  displayNotification: boolean = false;
   subscription: Subscription;
 
 
@@ -26,7 +27,7 @@ export class AddTaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(): void {
+  onSubmit(addTaskForm: NgForm): void {
     if(!this.text) {
      alert("please enter task");
      return;
@@ -38,12 +39,18 @@ export class AddTaskComponent implements OnInit {
       tags: this.tags.trim().split(','),
       reminder: this.reminder
     };
-
+    addTaskForm.reset();
+    this.toggleNotificationOff();
     return this.onAddTask.emit(newTask);
   }
 
   clearForm(addTaskForm: NgForm): void {
+    this.displayNotification = false;
     addTaskForm.reset();
+  }
+
+  toggleNotificationOff() {
+    this.displayNotification = !this.displayNotification;
   }
 
 }
