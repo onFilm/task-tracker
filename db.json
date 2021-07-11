@@ -20,7 +20,7 @@
       "id": 3,
       "text": "Doctors appointment",
       "day": "May 5th at 2:30pm",
-      "reminder": false,
+      "reminder": true,
       "tags": [
         "urgent",
         "bug"
@@ -32,7 +32,7 @@
       "tags": [
         "dental"
       ],
-      "reminder": false,
+      "reminder": true,
       "id": 4
     }
   ]
