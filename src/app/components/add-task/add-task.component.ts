@@ -35,7 +35,7 @@ export class AddTaskComponent implements OnInit {
     const newTask = {
       text: this.text,
       day: this.day,
-      tags: this.tags.split(','),
+      tags: this.tags.trim().split(','),
       reminder: this.reminder
     };
 

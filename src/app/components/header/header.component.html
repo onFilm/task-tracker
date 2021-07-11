@@ -5,7 +5,7 @@
                 <h1 class="title">{{ title }}</h1>
             </div>
             <div class="column">
-                <app-button text="{{showAddTask ? 'Close':'Add task'}}" color="{{showAddTask ? 'red':'green'}}" (btnClick)="addTaskBtnClick()"></app-button>
+                <app-button *ngIf="hasRoute('/')" text="{{showAddTask ? 'Close':'Add task'}}" color="{{showAddTask ? 'red':'green'}}" (btnClick)="addTaskBtnClick()"></app-button>
             </div>
         </div>
     </div>
