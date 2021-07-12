@@ -1,4 +1,5 @@
 .reminder {
+    box-shadow: 0 0 15px 5px grey;
     border-left: 10px solid green;
 }
 
@@ -10,11 +11,23 @@
     color: green;
 }
 
-.faicon:hover {
+.bell-green:hover {
     opacity: 0.5;
+    filter: drop-shadow(0 0 10px green);
+}
+
+.bell-red:hover {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 10px red);
+}
+
+.deleteIcon:hover {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 10px red);
 }
 
 .box {
+    background-color: ghostwhite;
     margin: 0% 15% 0% 15%;
     width: 70%;
 }

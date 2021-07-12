@@ -1,19 +1,19 @@
 <br>
 <div class="box" [ngClass]="{'reminder': task.reminder}">
-  <div class="card-content" [style.background-color]="'#FFFFCC'">
+  <div class="card-content">
       <div class="columns">
         <div class="column is-four-fifths">
           <h2><b>{{task.text}}</b></h2>
         </div>
         <div class="column">
           <span class="icon">
-            <fa-icon [icon]="icon" class="faicon fa-2x bell-green" *ngIf="iconColor" (click)="toggleOnBellIconClick(task)"></fa-icon>
-            <fa-icon [icon]="icon" class="faicon fa-2x bell-red" *ngIf="!iconColor" (click)="toggleOnBellIconClick(task)"></fa-icon>
+            <fa-icon [icon]="icon" class="faicon fa-2x bell-green" *ngIf="task.reminder" (click)="toggleOnBellIconClick(task)"></fa-icon>
+            <fa-icon [icon]="icon" class="faicon fa-2x bell-red" *ngIf="!task.reminder" (click)="toggleOnBellIconClick(task)"></fa-icon>
           </span> 
         </div>
       <div class="column">
           <span class="icon">
-            <fa-icon (click)="onDelete(task.id)" class="faicon fa-2x" [icon]="deleteIcon" [style.color]="'red'"></fa-icon>
+            <fa-icon (click)="onDelete(task.id)" class="faicon fa-2x deleteIcon" [icon]="deleteIcon" [style.color]="'red'"></fa-icon>
           </span>
       </div>
       </div>

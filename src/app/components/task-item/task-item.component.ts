@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 import { Task } from 'src/app/Task';
-import { faTimes, faBell, faBellSlash, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-task-item',
@@ -13,19 +13,12 @@ export class TaskItemComponent implements OnChanges {
   @Output() clickToToggle: EventEmitter<Task> = new EventEmitter();
 
   deleteIcon: any = faTrashAlt;
-  icon: any;
-  iconColor: any = "";
+  icon: any = faBell;
   
   constructor() { }
 
   ngOnChanges(): void {
-    if(this.task.reminder === true) {
-      this.icon = faBell;
-      this.iconColor = true;
-    } else {
-      this.icon = faBellSlash;
-      this.iconColor = false;
-    }
+
   }
 
   onDelete (id: any) {
